@@ -1,0 +1,54 @@
+<section>
+  <div class="row" style="margin-top: 20px;">
+    <leaflet bounds="bounds"
+                center="center"
+                markers="markers"
+                tiles="tiles"
+                url-hash-center="yes"
+                height="400"
+                class="col-md-8">
+    </leaflet>
+    <div id="datatable" class="col-md-4">
+      <script>var g_churches = [];</script>
+      <form name="vm.form.churchForm" class="form-horizontal" ng-submit="vm.save(vm.form.churchForm.$valid)" novalidate>
+        <legend>{{vm.church._id ? 'Edit church' : 'Add a new church'}}</legend>
+        <div class="form-group">
+          <label for="name" class="col-md-2 control-label">Name</label>
+          <div class="col-md-10">
+            <input name="name" type="text" ng-model="vm.church.name" id="name" class="form-control" required>
+            <div ng-messages="vm.form.churchForm.name.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Church name is required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lat" class="col-md-2 control-label">Lat</label>
+          <div class="col-md-10">
+            <input name="lat" type="text" ng-model="vm.church.lat" id="lat" class="form-control" required>
+            <div ng-messages="vm.form.churchForm.lat.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Church latitude is required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lng" class="col-md-2 control-label">Lng</label>
+          <div class="col-md-10">
+            <input name="lng" type="text" ng-model="vm.church.lng" id="lng" class="form-control" required>
+            <div ng-messages="vm.form.churchForm.lng.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Church longitude is required.</p>
+            </div>
+          </div>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-10 text-right">
+            <input type="submit" value="{{vm.church._id ? 'Save' : 'Create'}}" class="btn btn-success" />
+            <a ui-sref="churches.list" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
