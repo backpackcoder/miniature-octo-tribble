@@ -5,7 +5,8 @@ module.exports = {
     lib: {
       css: [
         'public/lib/bootstrap/dist/css/bootstrap.css',
-        'public/lib/bootstrap/dist/css/bootstrap-theme.css'
+        'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+        'public/lib/leaflet/dist/leaflet.css'
       ],
       js: [
         'public/lib/angular/angular.js',
@@ -16,7 +17,12 @@ module.exports = {
         'public/lib/angular-ui-utils/ui-utils.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
         'public/lib/angular-file-upload/angular-file-upload.js',
-        'public/lib/owasp-password-strength-test/owasp-password-strength-test.js'
+        'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
+        'public/lib/leaflet/dist/leaflet.js',
+        'public/lib/esri-leaflet/dist/esri-leaflet.js',
+        'public/lib/angular-simple-logger/dist/angular-simple-logger.min.js',
+        'public/lib/ui-leaflet/dist/ui-leaflet.min.js',
+        'public/lib/ui-leaflet-layers/dist/ui-leaflet-layers.min.js'
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']
     },
