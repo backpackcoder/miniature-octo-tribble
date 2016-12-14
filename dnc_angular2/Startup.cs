@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
+using DncAngular2.Models;
+
 namespace DncAngular2
 {
     public class Startup
@@ -30,6 +32,7 @@ namespace DncAngular2
         {
             // Add framework services.
             services.AddMvc();
+            services.AddDbContext<WebAppDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
