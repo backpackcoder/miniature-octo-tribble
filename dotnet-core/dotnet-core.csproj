@@ -85,10 +85,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <DotNetCliToolReference Include="BundlerMinifier.Core">
+      <Version>2.2.301</Version>
+    </DotNetCliToolReference>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet">
       <Version>1.0.0-msbuild1-final</Version>
     </DotNetCliToolReference>
   </ItemGroup>
+
+  <Target Name="PrecompileScript" BeforeTargets="Build" Condition=" '$(IsCrossTargetingBuild)' != 'true' ">
+    <Exec Command="dotnet bundle" />
+  </Target>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
