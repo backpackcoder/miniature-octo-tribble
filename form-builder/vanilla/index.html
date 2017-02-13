@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Form-Builder: Vanilla HTML/JS</title>
+    <meta name="description" content="Vanilla HTML/JS Form-Builder">
+    <meta name="author" content="Andrew Hammer">
+
+    <link rel="stylesheet" href="../bower_components/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Vanilla HTML/JS Form-Builder</h1>
+    <form>
+        <legend>Church Information</legend>
+        <fieldset>
+            <div>
+                <label for="inpName">Name</label>
+                <input id="inpName" name="name" type="text">
+            </div>
+            <div>
+                <label for="inpDistrict">District</label>
+                <select id="inpDistrict" name="district" placeholder="choose a district">>
+                <option>Central</option>
+                <option>Eastern</option>                
+                <option>Southern</option>
+                <option>Northern</option>
+                <option>Mbeya</option>
+            </select>
+            </div>
+            <div>
+                <label for="inpPastor">Pastor</label>
+                <input id="inpPastor" name="pastor" type="text">
+            </div>
+            <div>
+                <label for="inpPastorEmail">Pastor Email</label>
+                <input id="inpPastorEmail" name="pastorEmail" type="email">
+            </div>
+            <div>
+                <label for="inpLocationl">Location</label>
+                <input id="inpLocation" name="location" type="text">
+                <button id="btnChooseLoc" type="button">Choose</button>
+            </div>
+            <button type="submit">Save</button>
+        </fieldset>
+        <div id="divMap" style="display: none;">
+        </div>
+    </form>
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="vanilla.js"></script>
+</body>
+
+</html>
