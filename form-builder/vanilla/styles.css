@@ -1,0 +1,61 @@
+h1 {
+    text-align: center;
+}
+
+legend {
+    margin-left: 4px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+fieldset {
+    display: inline-block;
+    vertical-align: top;
+}
+
+fieldset div {
+    margin: 4px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 4px;
+}
+
+input {
+    display: inline-block;
+    width: 321px;
+}
+
+select {
+    display: inline-block;
+    width: 324px;
+    height: 23px;
+}
+
+button[type="submit"] {
+    text-align: center;
+    float: right;
+    margin-right: 4px;
+}
+
+
+#inpLocation {
+    width: 260px;
+}
+
+#inpLocation~button {
+    margin-left: -5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#divMap {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+}
