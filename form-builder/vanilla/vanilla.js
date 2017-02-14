@@ -1,13 +1,13 @@
-'use strict'
+'use strict';
 
-$(() => {
+$(function(){
     var elChooseLocBtn = $('#btnChooseLoc');
     var elLocation = $('#inpLocation');
     var elMap = $('#divMap');
     var map = L.map('divMap');
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 
-    elChooseLocBtn.on('click', (ev) => {
+    elChooseLocBtn.on('click', function(ev){
         if (elMap.is(':visible')) {
             elMap.fadeOut();
         } else {
@@ -30,8 +30,8 @@ $(() => {
             if (marker) {
                 map.removeLayer(marker);
             }
-            marker = L.marker([lat, lng], { draggable: true }).addTo(map)
-            marker.on('dragend', (ev) => {
+            marker = L.marker([lat, lng], { draggable: true }).addTo(map);
+            marker.on('dragend', function(ev){
                 elLocation.val(ev.target._latlng.lat + ',' + ev.target._latlng.lng);
             });
         }
