@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Form-Builder: Bootstrap 4</title>
+    <meta name="description" content="Bootstrap 4 Form-Builder">
+    <meta name="author" content="Andrew Hammer">
+
+    <link rel="stylesheet" href="../bower_components/bootstrap4/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bower_components/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1><a href="https://v4-alpha.getbootstrap.com" target="_blank">Bootstrap 4</a> Form-Builder</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form-horizontal">
+                    <legend>Church Information</legend>
+                    <fieldset>
+                        <div class="form-group row">
+                            <label for="inpName" class="col-sm-3 col-form-label">Name</label>
+                            <div class="col-sm-9">
+                                <input id="inpName" name="name" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inpDistrict" class="col-sm-3 col-form-label">District</label>
+                            <div class="col-sm-9">
+                                <select id="inpDistrict" name="district" placeholder="choose a district" class="form-control">
+                                <option>Central</option>
+                                <option>Eastern</option>
+                                <option>Southern</option>
+                                <option>Northern</option>
+                                <option>Mbeya</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inpPastor" class="col-sm-3 col-form-label">Pastor</label>
+                            <div class="col-sm-9">
+                                <input id="inpPastor" name="pastor" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inpPastorEmail" class="col-sm-3 col-form-label">Pastor Email</label>
+                            <div class="col-sm-9">
+                                <input id="inpPastorEmail" name="pastorEmail" type="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inpLocation" class="col-sm-3 col-form-label">Location</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input id="inpLocation" name="location" type="text" class="form-control">
+                                    <span class="input-group-btn">
+                                    <button id="btnChooseLoc" type="button" class="btn btn-default">
+                                        <i class="fa fa-globe"></i>
+                                    </button>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group row">
+                            <div class="offset-sm-10 col-sm-auto">
+                                <!-- needed to add margin-left to right align button -->
+                                <button type="submit" class="btn btn-default" style="margin-left: 34px;">Save</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div id="divMap" style="display: none;" class="col-md-6">
+            </div>
+        </div>
+    </div>
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="../bower_components/bootstrap3/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="bootstrap4.js"></script>
+</body>
+
+</html>
