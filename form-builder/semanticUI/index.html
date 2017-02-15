@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Form-Builder: Semantic UI</title>
+    <meta name="description" content="Semantic UI Form-Builder">
+    <meta name="author" content="Andrew Hammer">
+
+    <link rel="stylesheet" href="../bower_components/semantic/dist/semantic.min.css">
+
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bower_components/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<h1><a href="http://semantic-ui.com" target="_blank">Semantic UI</a> Form-Builder</h1>
+
+<h2>Church Information</h2>
+<form class="ui form grid container">
+    <div class="eight wide column">
+        <div class="inline fields ui grid container">
+            <label for="inpName" class="field four wide column">Name</label>
+            <div class="field twelve wide column">
+                <input id="inpName" name="name" type="text">
+            </div>
+        </div>
+        <div class="inline fields ui grid container">
+            <label for="inpDistrict" class="field four wide column">District</label>
+            <div class="field twelve wide column">
+                <select id="inpDistrict" name="district" placeholder="choose a district" class="form-control">
+                    <option>Central</option>
+                    <option>Eastern</option>
+                    <option>Southern</option>
+                    <option>Northern</option>
+                    <option>Mbeya</option>
+                </select>
+            </div>
+        </div>
+        <div class="inline fields ui grid container">
+            <label for="inpPastor" class="field four wide column">Pastor</label>
+            <div class="field twelve wide column">
+                <input id="inpPastor" name="pastor" type="text">
+            </div>
+        </div>
+        <div class="inline fields ui grid container">
+            <label for="inpPastorEmail" class="field four wide column">Pastor Email</label>
+            <div class="field twelve wide column">
+                <input id="inpPastorEmail" name="pastorEmail" type="email">
+            </div>
+        </div>
+        <div class="inline fields ui grid container">
+            <label for="inpLocation" class="field four wide column">Location</label>
+            <div class="field twelve wide column">
+                <input id="inpLocation" name="location" type="text" style="margin-right: 0;">
+                <button id="btnChooseLoc" type="button" class="right attached ui button">
+                    <i class="fa fa-globe"></i>
+                </button>
+            </div>
+        </div>
+        <div class="field sixteen wide column">
+            <!-- needed to add margin-left to right align button -->
+            <button type="submit" class="ui primary button" style="float: right; margin-right: 14px;">Save</button>
+        </div>
+    </div>
+    <div id="divMap" style="display: none;" class="eight wide column">
+    </div>
+</form>
+
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/semantic/dist/semantic.min.js"></script>
+<script src="../bower_components/leaflet/dist/leaflet.js"></script>
+<script src="semantic-ui.js"></script>
+</body>
+
+</html>
